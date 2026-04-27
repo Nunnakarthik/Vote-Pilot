@@ -1,0 +1,56 @@
+{
+  "registration": {
+    "title": "Voter Registration Guide",
+    "steps": [
+      "Check your eligibility (Age 18+, Citizenship).",
+      "Visit the official Voter Portal (NVSP) or use the Voter Helpline App.",
+      "Fill out Form 6 for new registration.",
+      "Upload required documents (ID proof, Address proof, Photo).",
+      "Submit and track your reference ID."
+    ],
+    "tip": "Register early! Most states close registration 2-4 weeks before election day."
+  },
+  "voting": {
+    "title": "How to Cast Your Vote",
+    "steps": [
+      "Find your assigned polling booth using your Epic ID.",
+      "Bring a valid Photo ID (Voter ID, Aadhaar, etc.).",
+      "Get your finger inked and sign the register.",
+      "Pressed the button for your candidate on the EVM.",
+      "Wait for the BEEP sound and verify the VVPAT slip."
+    ],
+    "tip": "If you are in line when the polls close, you are legally entitled to vote. Don't leave!"
+  },
+  "documents": {
+    "title": "Required Identification",
+    "steps": [
+      "Voter ID Card (EPIC Card).",
+      "Aadhaar Card.",
+      "PAN Card.",
+      "Passport.",
+      "Driving License."
+    ],
+    "tip": "Even without a physical Voter ID card, you can vote if your name is in the electoral roll and you have another valid photo ID."
+  },
+  "timeline": {
+    "title": "Election Timeline Phase",
+    "steps": [
+      "Notification & Nomination Period.",
+      "Scrutiny of Proposals.",
+      "Campaigning Period (Ends 48hrs before poll).",
+      "Polling Day.",
+      "Counting of Votes & Declaration."
+    ],
+    "tip": "Check the official ECI website for state-specific dates."
+  },
+  "results": {
+    "title": "Election Results Process",
+    "steps": [
+      "Sealing of EVMs at the polling station.",
+      "Secure storage in Strong Rooms.",
+      "Counting day process under observer supervision.",
+      "Real-time update on the ECI app/website."
+    ],
+    "tip": "Only trust results declared by the Election Commission of India officials."
+  }
+}
