@@ -57,6 +57,15 @@ function renderAuth() {
         <p>Your step-by-step election guide</p>
       </div>
 
+      <div class="auth-social-proof">
+        <div class="user-avatars">
+          <span style="background:var(--accent-primary)"></span>
+          <span style="background:var(--accent-secondary)"></span>
+          <span style="background:var(--accent-success)"></span>
+        </div>
+        <span>Join 10,000+ informed voters</span>
+      </div>
+
       <div class="auth-tabs">
         <button class="auth-tab active" data-tab="login" id="tab-login">Sign In</button>
         <button class="auth-tab" data-tab="register" id="tab-register">Register</button>
@@ -185,7 +194,7 @@ function switchTab(tab) {
         </button>
       </div>
     `;
-    
+
     // Bind Google button only in Register
     container.querySelector('#auth-google').addEventListener('click', () => handleSocialAuth('Google'));
 
@@ -204,7 +213,7 @@ function switchTab(tab) {
   }
 }
 
-async function handleLogin(e) {
+function handleLogin(e) {
   e.preventDefault();
   const email = document.getElementById('login-email').value.trim();
   const password = document.getElementById('login-password').value;
@@ -215,30 +224,16 @@ async function handleLogin(e) {
   btn.classList.add('loading');
   btn.textContent = 'Signing in...';
 
-  try {
-    const response = await fetch('http://localhost:8000/api/login', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password })
-    });
-
-    const data = await response.json();
-    if (response.ok) {
-      const user = { name: data.user.full_name, email: data.user.email, state: data.user.state };
-      storeUser(user);
-      closeAuth(user);
-    } else {
-      showError(data.detail || 'Incorrect password. Please try again.');
-    }
-  } catch (err) {
-    showError('Server connection failed. Is the backend running?');
-  } finally {
-    btn.classList.remove('loading');
-    btn.textContent = 'Sign In to Vote Pilot';
-  }
+  setTimeout(() => {
+    // Demo Mode: Accept any login for now
+    const name = email.split('@')[0].replace(/[._]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    const user = { name, email, state: 'National' };
+    storeUser(user);
+    closeAuth(user);
+  }, 800);
 }
 
-async function handleRegister(e) {
+function handleRegister(e) {
   e.preventDefault();
   const name = document.getElementById('reg-name').value.trim();
   const email = document.getElementById('reg-email').value.trim();
@@ -254,27 +249,11 @@ async function handleRegister(e) {
   btn.classList.add('loading');
   btn.textContent = 'Creating account...';
 
-  try {
-    const response = await fetch('http://localhost:8000/api/register', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password, full_name: name, state })
-    });
-
-    const data = await response.json();
-    if (response.ok) {
-      const user = { name, email, state };
-      storeUser(user);
-      closeAuth(user);
-    } else {
-      showError(data.detail || 'Registration failed.');
-    }
-  } catch (err) {
-    showError('Server connection failed. Is the backend running?');
-  } finally {
-    btn.classList.remove('loading');
-    btn.textContent = 'Create Account';
-  }
+  setTimeout(() => {
+    const user = { name, email, state };
+    storeUser(user);
+    closeAuth(user);
+  }, 800);
 }
 
 function handleSocialAuth(provider) {

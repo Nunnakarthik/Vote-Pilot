@@ -18,7 +18,7 @@ function getGoogleCalendarLink(phase) {
   const dateStr = phase.date.includes('2024') ? '20241105T090000Z/20241105T170000Z' : '20241105T090000Z/20241105T170000Z';
   return `https://www.google.com/calendar/render?action=TEMPLATE&text=${title}&details=${details}&dates=${dateStr}`;
 }
- */
+
 export function renderTimelineView(container) {
   const activeIndex = electionPhases.findIndex(p => p.status === 'active');
   const progressPercent = ((activeIndex + 0.5) / electionPhases.length) * 100;

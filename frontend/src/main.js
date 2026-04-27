@@ -4,6 +4,7 @@
    ========================================== */
 
 import { showAuthPage, getCurrentUser, logoutUser } from './components/auth.js';
+import './firebase.js';
 import { renderChatView, resetChat, sendProgrammaticMessage } from './components/chat.js';
 import { renderTimelineView } from './components/timeline.js';
 import { renderGuideView } from './components/guide-cards.js';

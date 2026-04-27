@@ -101,6 +101,38 @@
   margin-top: var(--space-xs);
 }
 
+/* Social Proof */
+.auth-social-proof {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-base);
+  margin-bottom: var(--space-xl);
+  background: rgba(0, 229, 255, 0.05);
+  border: 1px solid rgba(0, 229, 255, 0.1);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-full);
+}
+
+.auth-social-proof span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.user-avatars {
+  display: flex;
+  margin-right: -4px;
+}
+
+.user-avatars span {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--bg-primary);
+  margin-right: -6px;
+}
+
 /* Tabs */
 .auth-tabs {
   display: flex;
