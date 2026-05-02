@@ -1,8 +1,10 @@
 /**
  * Intent Detection Service
- * Categorizes user queries based on keywords
+ * Categorizes user queries based on keywords to route to the correct local knowledge logic.
+ *
+ * @param {string} message - The raw text input from the user.
+ * @returns {{ intent: string, confidence: number }} An object containing the matched intent and a confidence score.
  */
-
 export const detectIntent = (message) => {
   const query = message.toLowerCase();
   

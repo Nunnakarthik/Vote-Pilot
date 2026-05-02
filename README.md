@@ -12,12 +12,13 @@ Vote Pilot explicitly addresses the challenge of creating an **AI-Powered Electi
 
 ### 1. Code Quality & Maintainability
 - **Modular Architecture**: Frontend logic is separated into specialized components (`chat.js`, `auth.js`, `guide.js`).
-- **JSDoc Documentation**: All functions are documented with standard JSDoc for easy maintenance and readability.
-- **Vite/FastAPI**: Uses a modern tech stack (Vite for frontend, FastAPI for backend) for high performance and clean code.
+- **JSDoc Documentation**: All backend services (`aiService.js`, `intentService.js`, `formatterService.js`, `knowledgeService.js`) and controllers are documented with standard JSDoc for easy maintenance and readability.
+- **Vite/Express**: Uses a modern tech stack (Vite for frontend, Express for backend) for high performance and clean code.
 
 ### 2. Security & Responsible AI
+- **Rate Limiting**: Backend is protected against brute-force and DDoS attacks using `express-rate-limit`.
+- **Content Security Policy (CSP)**: Strict security headers enforced via `helmet` middleware.
 - **Input Sanitization**: Implements robust HTML escaping to prevent XSS attacks.
-- **Content Security Policy (CSP)**: Strict security headers enforced via `<meta>` tag.
 - **Expert Persona**: AI is strictly prompted to be non-partisan and authoritative, avoiding hallucinations.
 
 ### 3. Accessibility & Inclusive Design

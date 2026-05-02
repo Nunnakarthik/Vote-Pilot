@@ -5,7 +5,12 @@ dotenv.config();
 
 /**
  * AI Service (Antigravity/Gemini Integration)
- * Calls the external AI model for complex queries
+ * Calls the external AI model for complex queries that cannot be handled by the local knowledge base.
+ *
+ * @param {string} userMessage - The query from the user.
+ * @param {string} [userLevel='beginner'] - The assumed knowledge level of the user (e.g., 'beginner', 'expert').
+ * @returns {Promise<string>} A promise that resolves to the formatted markdown string from the AI.
+ * @throws {Error} If the AI service fails to respond correctly.
  */
 export const callAI = async (userMessage, userLevel = 'beginner') => {
   const apiKey = process.env.GEMINI_API_KEY;

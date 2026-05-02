@@ -1,3 +1,10 @@
+/**
+ * Knowledge Service
+ * Provides static, pre-defined deterministic answers for standard election intents.
+ *
+ * @param {string} intent - The intent category (e.g., 'voting', 'registration').
+ * @returns {Object|null} The knowledge object containing title, steps, and tip, or null if not found.
+ */
 export function getKnowledge(intent) {
     const data = {
         voting: {
