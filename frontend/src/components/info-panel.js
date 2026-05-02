@@ -73,7 +73,7 @@ export function renderHomeInfoPanel(panelEl) {
     <!-- Google Calendar — Key Dates -->
     <div class="info-card fade-in-up fade-in-up-3" style="border-color: rgba(0,229,255,0.15);">
       <div class="card-title" style="display:flex;align-items:center;gap:var(--space-sm);margin-bottom:var(--space-base);">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
         <span>KEY DATES</span>
         <span style="font-size:0.55rem;color:var(--accent-primary);margin-left:auto;">Google Calendar</span>
       </div>
@@ -96,7 +96,7 @@ export function renderHomeInfoPanel(panelEl) {
           <a href="${getPollingStationMapUrl()}" target="_blank" rel="noopener"
             style="font-size:var(--font-xs);color:var(--accent-primary);text-decoration:none;display:flex;align-items:center;gap:4px;">
             Open in Google Maps
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            <svg aria-hidden="true" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           </a>
         </div>
       </div>

@@ -2,7 +2,7 @@
   "name": "vote-pilot-election-guide",
   "private": true,
   "version": "1.0.0",
-  "description": "AI-Powered Election Process Education Assistant",
+  "description": "AI-Powered Election Education Assistant Frontend",
   "type": "module",
   "scripts": {
     "dev": "vite",

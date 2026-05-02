@@ -1,7 +1,7 @@
 {
   "name": "vote-pilot-backend",
   "version": "1.0.0",
-  "description": "Production-ready backend for AI Election Assistant",
+  "description": "AI-Powered Election Education Assistant Backend",
   "main": "src/app.js",
   "type": "module",
   "scripts": {

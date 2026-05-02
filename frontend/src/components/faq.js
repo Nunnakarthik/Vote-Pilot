@@ -19,7 +19,7 @@ export function renderFaqView(container, onNavigateToChat) {
 
       <!-- Search -->
       <div class="faq-search fade-in-up fade-in-up-1">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         <input type="text" id="faq-search-input" placeholder="Search for questions, keywords, or topics..." />
       </div>
 
@@ -48,7 +48,7 @@ export function renderFaqView(container, onNavigateToChat) {
           <div class="faq-item" data-category="${faq.category}" data-index="${i}">
             <div class="faq-question" data-index="${i}">
               <span>${faq.question}</span>
-              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              <svg aria-hidden="true" class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </div>
             <div class="faq-answer">
               <p>${faq.answer}</p>
