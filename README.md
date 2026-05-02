@@ -3,6 +3,11 @@
 ## 🌟 Overview
 **Vote Pilot** is an AI-powered election assistant designed to make voting accessible, understandable, and secure for everyone. It bridges the gap between complex election data and the everyday citizen by providing clear, step-by-step guidance.
 
+## 🎯 Problem Statement Alignment
+Vote Pilot explicitly addresses the challenge of creating an **AI-Powered Election Education Assistant**. 
+- **The Problem:** Voters often find election processes complex, confusing, and hard to navigate, leading to low turnout.
+- **The Solution:** We provide a hybrid AI approach combining local deterministic knowledge (for 100% accurate standard procedures) with Google Gemini (for edge-case questions), packaged in an intuitive, highly accessible, multi-lingual UI.
+
 ## 🏆 Evaluation Focus Areas Implementation
 
 ### 1. Code Quality & Maintainability

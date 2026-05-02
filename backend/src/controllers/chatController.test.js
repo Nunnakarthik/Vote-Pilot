@@ -18,13 +18,13 @@ describe('chatController', () => {
     vi.clearAllMocks();
   });
 
-  it('should return 400 if prompt is missing', async () => {
+  it('should return 400 if message is missing', async () => {
     const res = await request(app)
       .post('/api/chat')
       .send({});
     
     expect(res.statusCode).toBe(400);
-    expect(res.body).toHaveProperty('error', 'Prompt is required');
+    expect(res.body).toHaveProperty('error', 'Message is required');
   });
 
   it('should return 200 and formatted response for valid prompt', async () => {
@@ -36,7 +36,7 @@ describe('chatController', () => {
 
     const res = await request(app)
       .post('/api/chat')
-      .send({ prompt: 'How do I vote?' });
+      .send({ message: 'How do I vote?' });
 
     expect(res.statusCode).toBe(200);
     expect(res.body).toHaveProperty('response', mockResponse.message);
@@ -50,7 +50,7 @@ describe('chatController', () => {
 
     const res = await request(app)
       .post('/api/chat')
-      .send({ prompt: 'Tell me a joke.' });
+      .send({ message: 'Tell me a joke.' });
 
     expect(res.statusCode).toBe(500);
     expect(res.body).toHaveProperty('error', 'Internal server error');
